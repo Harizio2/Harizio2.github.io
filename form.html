@@ -18,11 +18,19 @@
 <br>
 <br>
 
-<form action="mailto:harrihuhta@kamk.fi" method="POST">
+<form action="mailto:harrihuhta@kamk.fi" method="POST" id="validate" onsubmit="return validateSubmit()"> 
 	<input type="email" name="_replyto">
 	<textarea   name="body">
 	</textarea>
 	<input type="submit" value="Send">
 </form>
+<script>
+function validateSubmit(){
+	return false;
+var frm = document.getElementById("validate");
+frm.setAttribute("action","mailto:harrihuhta@kamk.fi");
+frm.submit();
+}
+</script>
 </body>
 </html>
