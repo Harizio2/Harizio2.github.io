@@ -2,7 +2,7 @@
 <html>
 <body>
 
-<form action="mailto:harrihuhta@kamk.fi" method="POST" id="validate" onsubmit="return validateSubmit()"> 
+<form action="mailto:FAKEADDRESS@kamk.fi" method="POST" id="validate" onsubmit="return validateSubmit()"> 
 	<input type="email" name="_replyto" value="asd@gmail.com" id="validateEmail">
 	<textarea   name="body" id="validateMessage">
 	</textarea>
@@ -28,7 +28,8 @@ function validateSubmit(){
 	
 	//continue and post
 	var frm = document.getElementById("validate");
-	frm.setAttribute("action","https://formspree.io/harrihuhta@kamk.fi");//using formspree to send directly, alternative "mailto:harrihuhta@kamk.fi" for app
+	var urlName = "harrihuhta";//trick bots?
+	frm.setAttribute("action","https://formspree.io/" + urlName + "@kamk.fi");//using formspree to send directly, alternative "mailto:FAKEADRRESS@kamk.fi" for app
 	frm.submit();
 }
 </script>
