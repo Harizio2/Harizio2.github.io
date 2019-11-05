@@ -1,42 +1,37 @@
 <!DOCTYPE html>
 <html>
 <body>
-<form action="https://usebasin.com/f/931ba16df445" method="POST">
-<label for="email-address">Email Address</label>
-<input type="email" id="email" name="contact" required>
-<button type="submit">Submit</button>
-</form>
-<br>
-<br>
-
-<form action="https://formspree.io/harrihuhta@kamk.fi" method="POST">
-	<input type="email" name="_replyto">
-	<textarea   name="body">
-	</textarea>
-	<input type="submit" value="Send">
-</form>
-<br>
-<br>
 
 <form action="mailto:harrihuhta@kamk.fi" method="POST" id="validate" onsubmit="return validateSubmit()"> 
-	<input type="email" name="_replyto" value="asd@gmail.com">
+	<input type="email" name="_replyto" value="asd@gmail.com" id="validateEmail">
 	<textarea   name="body" id="validateMessage">
 	</textarea>
 	<input type="submit" value="Send">
 </form>
+
 <script>
 function validateSubmit(){
+	//validate message
 	var msg = document.getElementById("validateMessage").value;
 	msg = msg.trim();
 	if(msg == ""){
-	alert("Must include a message!");
-	return false;
+		alert("Must include a message!");
+		return false;
 	}
-var frm = document.getElementById("validate");
-//frm.setAttribute("action","mailto:harrihuhta@kamk.fi");
-frm.setAttribute("action","https://formspree.io/harrihuhta@kamk.fi");
-frm.submit();
+	//validate email address
+	var email = document.getElementById("validateEmail").value;
+	var validEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email);
+	if(validEmail == false){
+		alert("Invalid email adress");
+		return false;
+	}
+	
+	//continue and post
+	var frm = document.getElementById("validate");
+	frm.setAttribute("action","https://formspree.io/harrihuhta@kamk.fi");//using formspree to send directly, alternative "mailto:harrihuhta@kamk.fi" for app
+	frm.submit();
 }
 </script>
+
 </body>
 </html>
