@@ -37,7 +37,7 @@
     <div id="fullpage">
 <!-- begin section -->
 
-        <div class="section aboutme" data-anchor="aboutme" style="background-color:white">
+        <div class="section aboutme" data-anchor="aboutme">
                 <h1 style="color:white">KIM<span style="color:#FF6363">&</span>HARRI</h1>
                 <p><span id="holder"></span><span class="blinking-cursor">|</span></p>
             <i id="moveDown" class="fa fa-chevron-down fa-3x bounce"></i>
@@ -52,8 +52,11 @@
 <br />
 <br />
 <!-- GEO -->
+<h1>Geo-location</h1>
 <p id="demo">Click the button to get your coordinates.</p>
 <button onclick="getLocation()">Try It</button>
+<br />
+<br />
 <!-- end GEO-->
 
 <iframe id="test" width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=26.622619628906254%2C63.967524231698135%2C28.435363769531254%2C64.46509926662686&amp;layer=mapnik" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/#map=10/64.2174/27.5290">Näytä isommalla kartalla</a></small>
@@ -62,7 +65,19 @@
 		</div>
         <!-- end section -->
 <div class="section" data-anchor="projects">
-
+<br />
+<br />
+<br />
+<br />
+<br />
+<!-- form -->
+<form action="mailto:FAKEADDRESS@kamk.fi" method="POST" id="validate" onsubmit="return validateSubmit()"> 
+	<input type="email" name="_replyto" value="asd@gmail.com" id="validateEmail">
+	<textarea   name="body" id="validateMessage">
+	</textarea>
+	<input type="submit" value="Send">
+</form>
+<!-- end form-->
 </div>
     </div>
     <!-- end fullpage -->
@@ -73,5 +88,5 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
     <script src="MAINjava.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.4/jquery.fullPage.min.js"></script>
-	<script src="geo.js"></script>
+	<script src="course.js"></script>
 </body>
