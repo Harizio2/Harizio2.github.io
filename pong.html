@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <style>
-body { left: 50%;position:fixed;}
+body {background-color:black; left: 50%;position:fixed;}
 canvas { left:-50%;position:relative; }
 </style>
 
@@ -117,10 +117,14 @@ function Render(){
   ctx.beginPath();
   
   //ball
+  ctx.fillStyle = "LightGreen";
+  ctx.strokeStyle = "Orange";
+  ctx.strokeWidth = 20;
   DrawBall(ballPos,ballRadius);
+  ctx.fill();
   
   //player
-  ctx.fillStyle = "Red";
+  ctx.fillStyle = "Orange";
   DrawRect(playerPos,playerSize);
   
   //enemy
