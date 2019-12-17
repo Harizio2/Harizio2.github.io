@@ -79,7 +79,28 @@
 	<input type="submit" value="Send" >
 </form>
 <!-- end form-->
-</div>
+<!-- drag -->
+<h1>Drag & drop</h1>
+
+<img id="puzzlePiece1" src="star1.png" draggable="true" ondragstart="drag(event)">
+<img id="puzzlePiece2" src="star2.png" draggable="true" ondragstart="drag(event)">
+<img id="puzzlePiece3" src="star3.png" draggable="true" ondragstart="drag(event)">
+<img id="puzzlePiece4" src="star4.png" draggable="true" ondragstart="drag(event)">
+<table id = "puzzleTable">
+  <tr>
+    <td id="puzzleCell" ondrop="place(event)" ondragover="showDroppable(event)"></td>
+    <td id="puzzleCell" ondrop="place(event)" ondragover="showDroppable(event)"></td>
+  </tr>
+  <tr>
+    <td id="puzzleCell" ondrop="place(event)" ondragover="showDroppable(event)"></td>
+    <td id="puzzleCell" ondrop="place(event)" ondragover="showDroppable(event)"></td>
+  </tr>
+</table>
+<ul>
+  <li>This</li>
+  <li>is</li>
+  <li>list</li>
+</ul>
     </div>
     <!-- end fullpage -->
 

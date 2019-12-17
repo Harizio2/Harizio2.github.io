@@ -43,3 +43,17 @@ function validateSubmit(){
 	frm.setAttribute("action","https://formspree.io/" + urlName + "@kamk.fi");//using formspree to send directly, alternative "mailto:FAKEADRRESS@kamk.fi" for app
 	frm.submit();
 }
+function place(e) {
+  e.preventDefault();
+  var pieceID = e.dataTransfer.getData("pieceID");
+  var piece = document.getElementById(pieceID);
+  e.target.appendChild(piece);
+  e.target.setAttribute("ondrop","");
+  e.target.setAttribute("ondragover","");
+}
+function drag(e) {
+  e.dataTransfer.setData("pieceID", e.target.id);
+}
+function showDroppable(e) {
+  e.preventDefault();
+}

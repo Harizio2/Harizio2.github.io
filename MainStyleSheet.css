@@ -723,3 +723,15 @@ label {
     -moz-border-radius: 4px;
     border-radius: 4px;
 }
+#puzzleCell{
+	margin:auto;
+	overflow:auto;
+	width:200px;
+	height:200px;
+	border-width:2px;
+	border-style:solid;
+}
+#puzzleTable{
+	margin:auto;
+	width:400px;
+}
